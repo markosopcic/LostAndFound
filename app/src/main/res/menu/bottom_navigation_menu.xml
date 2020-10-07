@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/baseMenu_map"
+        android:icon="@drawable/ic_baseline_map_24"
+        android:title="@string/bottom_navigation_menu_map" />
+
+    <item
+        android:id="@+id/baseMenu_search"
+        android:icon="@drawable/ic_baseline_search_24"
+        android:title="@string/bottom_navigation_menu_search" />
+
+    <item
+        android:id="@+id/baseMenu_myReportedItems"
+        android:icon="@drawable/ic_baseline_format_list_numbered_24"
+        android:title="@string/bottom_navigation_menu_reportedItems" />
+
+    <item
+        android:id="@+id/baseMenu_myInfo"
+        android:icon="@drawable/ic_baseline_info_24"
+        android:title="@string/bottom_navigation_menu_myInfo" />
+</menu>

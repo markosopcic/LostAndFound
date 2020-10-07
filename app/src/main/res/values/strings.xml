@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LostAndFound</string>
+    <string name="bottom_navigation_menu_map">Map</string>
+    <string name="bottom_navigation_menu_reportedItems">Reported Items</string>
+    <string name="bottom_navigation_menu_myInfo">My Info</string>
+    <string name="bottom_navigation_menu_search">Search</string>
+</resources>

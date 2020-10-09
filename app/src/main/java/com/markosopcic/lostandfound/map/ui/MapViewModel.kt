@@ -1,8 +1,10 @@
 package com.markosopcic.lostandfound.map.ui
 
+import base.routing.Router
 import base.routing.RoutingActionSender
 import base.ui.BaseViewModel
 import com.markosopcic.lostandfound.locationlib.model.Coordinates
+import com.markosopcic.lostandfound.locationlib.usecase.GetCurrentLocation
 import com.markosopcic.lostandfound.locationlib.usecase.GetLocationPermissionStatus
 import com.markosopcic.lostandfound.locationlib.usecase.RequestLocationPermission
 import com.markosopcic.lostandfound.map.ui.MapViewState.LocationPermissionStatus
@@ -16,6 +18,7 @@ class MapViewModel(
         private val getLocationPermissionStatus: GetLocationPermissionStatus,
         private val requestLocationPermission: RequestLocationPermission,
         private val getNearReportedItems: GetNearReportedItems,
+        private val getCurrentLocation: GetCurrentLocation,
         private val updateCurrentMapCenter: UpdateCurrentMapCenter,
         backgroundScheduler: Scheduler,
         mainScheduler: Scheduler,
@@ -27,6 +30,12 @@ class MapViewModel(
     private val shownItemIds = mutableSetOf<Int>()
 
     init {
+        observe(getCurrentLocation().map {
+            MapViewState.LocationViewState(
+                    it.longitude,
+                    it.latitude
+            )
+        })
         execute(mapInitializedProcessor
                 .filter { it }
                 .switchMapCompletable {
@@ -49,8 +58,24 @@ class MapViewModel(
     }
 
     fun mapRecentered(center: Coordinates, widthMeters: Double) {
-        execute(updateCurrentMapCenter(CenterAndRange(center.longitude, center.latitude, widthMeters)))
+        execute(
+            updateCurrentMapCenter(
+                CenterAndRange(
+                    center.longitude,
+                    center.latitude,
+                    widthMeters
+                )
+            )
+        )
     }
 
     private fun requestPermission(permission: Boolean) = requestLocationPermission()
+
+    fun markerClicked(id: Int) {
+
+    }
+
+    fun showOptions() {
+        sendRoutingAction(Router::showMapOptionsScreen)
+    }
 }

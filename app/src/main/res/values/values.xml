@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="initial_day_range_slider_values">
+        <item>0.0</item>
+        <item>30</item>
+    </array>
+
+    <integer name="map_options_radius_step">100</integer>
+    <integer name="map_options_days_step">1</integer>
+</resources>

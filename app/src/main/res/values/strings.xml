@@ -4,4 +4,11 @@
     <string name="bottom_navigation_menu_reportedItems">Reported Items</string>
     <string name="bottom_navigation_menu_myInfo">My Info</string>
     <string name="bottom_navigation_menu_search">Search</string>
+    <string name="map_options_radius_slider_from">1000</string>
+    <string name="map_options_radius_slider_to">100000</string>
+    <string name="map_options_radius_slider_initial_value">10000</string>
+    <string name="map_options_dayNumber_value_from">0</string>
+    <string name="map_options_day_slider_value_to">365</string>
+    <string name="map_options_radius_text">Radius in meters : %d</string>
+    <string name="map_options_days_text">Found/Lost between %d and %d days ago</string>
 </resources>

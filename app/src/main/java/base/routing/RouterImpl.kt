@@ -6,11 +6,15 @@ import androidx.fragment.app.FragmentManager
 import com.markosopcic.lostandfound.MainActivity
 import com.markosopcic.lostandfound.R
 import kotlinx.android.synthetic.main.activity_main.*
+import mapoptions.ui.MapOptionsFragment
 import timber.log.Timber
 
 @IdRes
 private const val MAIN_CONTAINER = R.id.activity_main
+
+private const val MAP_CONTAINER = R.id.main_container
 private const val MAP_SCREEN_INDEX = 0
+
 class RouterImpl(
     private val activity: AppCompatActivity,
     private val fragmentManager: FragmentManager
@@ -23,6 +27,14 @@ class RouterImpl(
         }
     }
 
-    override fun requestPermissions(permissions: Array<String>) = activity.requestPermissions(permissions, 0)
+    override fun requestPermissions(permissions: Array<String>) =
+        activity.requestPermissions(permissions, 0)
+
+    override fun showMapOptionsScreen() =
+        fragmentManager.addFragment(MAP_CONTAINER, MapOptionsFragment())
+
+    override fun closeMapOptions() {
+        fragmentManager.removeFragment(MapOptionsFragment::class.java.simpleName)
+    }
 
 }

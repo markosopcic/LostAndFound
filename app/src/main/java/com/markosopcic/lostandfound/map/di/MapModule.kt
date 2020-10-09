@@ -9,5 +9,16 @@ import org.koin.dsl.module
 
 fun mapModule() = module {
 
-    viewModel { MapViewModel(get(), get(), get(), get(), get(named(BACKGROUND_SCHEDULER)), get(named(MAIN_SCHEDULER)), get()) }
+    viewModel {
+        MapViewModel(
+                get(),
+                get(),
+                get(),
+                get(),
+                get(),
+                get(named(BACKGROUND_SCHEDULER)),
+                get(named(MAIN_SCHEDULER)),
+                get()
+        )
+    }
 }

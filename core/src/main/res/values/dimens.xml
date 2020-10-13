@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="common_margin">10dp</dimen>
+    <dimen name="base_rounded_background_radius">10dp</dimen>
+    <dimen name="base_bottom_sheet_elevation">15dp</dimen>
+</resources>

@@ -1,6 +1,10 @@
-include ':dependencieslib'
-include ':dependencies'
+include ':reporteditemslib'
+include ':mapoptions'
 include ':map'
-include ':base'
+include ':locationlib'
+include ':com.markosopcic.reporteditemslib'
+include ':core'
+include ':com.markosopcic.base'
+include ':com.markosopcic.base'
 include ':app'
 rootProject.name = "LostAndFound"

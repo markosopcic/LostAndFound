@@ -1,7 +1,7 @@
 package com.markosopcic.lostandfound
 
-import base.routing.Router
-import base.ui.BaseActivity
+import com.markosopcic.core.routing.Router
+import com.markosopcic.core.ui.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity(R.layout.activity_main) {

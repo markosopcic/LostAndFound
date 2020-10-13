@@ -1,0 +1,10 @@
+apply plugin: 'com.android.library'
+
+apply from: "$rootDir/buildSrc/src/build.gradle"
+
+dependencies{
+    implementation project(":core")
+    implementation project(":locationlib")
+    implementation project(":mapoptions")
+    implementation project(":reporteditemslib")
+}

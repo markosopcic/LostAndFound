@@ -12,10 +12,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/base" />
-            <option value="$PROJECT_DIR$/dependencies" />
-            <option value="$PROJECT_DIR$/dependencieslib" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/com.markosopcic.base" />
+            <option value="$PROJECT_DIR$/com.markosopcic.reporteditemslib" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/locationlib" />
             <option value="$PROJECT_DIR$/map" />
+            <option value="$PROJECT_DIR$/mapoptions" />
+            <option value="$PROJECT_DIR$/reporteditemslib" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

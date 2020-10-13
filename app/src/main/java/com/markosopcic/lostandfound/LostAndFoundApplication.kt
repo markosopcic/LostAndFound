@@ -1,11 +1,12 @@
 package com.markosopcic.lostandfound
 
 import android.app.Application
-import base.di.baseModule
-import com.markosopcic.lostandfound.locationlib.di.locationModule
-import com.markosopcic.lostandfound.map.di.mapModule
-import com.markosopcic.lostandfound.reporteditemslib.module.reportedItemsModule
-import mapoptions.di.mapOptionsModule
+import com.markosopcic.core.di.coreModule
+import com.markosopcic.locationlib.di.locationModule
+import com.markosopcic.lostandfound.di.appModule
+import com.markosopcic.map.di.mapModule
+import com.markosopcic.mapoptions.di.mapOptionsModule
+import com.markosopcic.reporteditemslib.module.reportedItemsModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import timber.log.Timber
@@ -17,11 +18,12 @@ class LostAndFoundApplication : Application() {
         startKoin {
             androidContext(this@LostAndFoundApplication)
             modules(
-                baseModule(),
-                mapModule(),
+                appModule(),
+                coreModule(),
                 locationModule(),
-                reportedItemsModule(),
-                mapOptionsModule()
+                mapOptionsModule(),
+                mapModule(),
+                reportedItemsModule()
             )
         }
 
